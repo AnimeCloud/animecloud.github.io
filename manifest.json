@@ -3,12 +3,12 @@
   "name": "AnimeCloud by Warkov",
   "icons": [
     {
-      "src": "icon192.jpg",
+      "src": "https://i.ibb.co/ncPcmk3/icon192.jpg",
       "type": "image/jpg",
       "sizes": "192x192"
     },
     {
-      "src": "icon512.jpg",
+      "src": "https://i.ibb.co/P1PsskX/icon512.jpg",
       "type": "image/jpg",
       "sizes": "512x512"
     }
