@@ -5,6 +5,7 @@
 	<title>AniCloud</title>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="framework7-bundle.min.css">
 	<link rel="manifest" href="manifest.json">
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-touch-fullscreen" content="yes" />
@@ -16,19 +17,15 @@
       sizes="512x512"
       href="https://i.ibb.co/P1PsskX/icon512.jpg"
     />
-    <link rel="stylesheet" href="framework7.bundle.min.css">
     <script type="text/javascript" src="framework7.bundle.min.js"></script>
-	<script type="text/javascript" src="upscroller.js"></script>
-	<script type="text/javascript" src="routes.js"></script>
-	<script type="text/javascript" src="jquery.min.js"></script>
 	<script>
 	
 		if (!app.device.standalone && !app.device.desktop && localStorage['dev_mode'] === undefined) {
 			if (app.device.ios){
 				app.popup.create({
 					animate: false,
-					content: '<div class="popup popup-tablet-fullscreen"> \
-								<div class="page-content"> \
+					content: '<script>alert("iOS Device");</script> \
+								<h1>iOS Device PWA page is this:</h1> \
 									<div style="margin-top: 45px"> \
 										<div class="panel-handshake-container panel-min-content"> \
 											<div class="panel-logo-line"></div> \
