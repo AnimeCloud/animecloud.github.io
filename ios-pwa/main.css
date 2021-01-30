@@ -1,21 +1,21 @@
 
-@font-face {
-    font-family: MainFont; /* Гарнитура шрифта */
-    src: url(fonts/main.ttf); /* Путь к файлу со шрифтом */
+/*@font-face {*/
+    /*font-family: MainFont;*/ /* Гарнитура шрифта */
+    /**src: url(fonts/main.ttf);*/ /* Путь к файлу со шрифтом */
 }
 
 @font-face {
-    font-family: MainFont1; /* Гарнитура шрифта */
-    src: url(fonts/mainfont.otf); /* Путь к файлу со шрифтом */
+    /*font-family: MainFont1; /* Гарнитура шрифта */
+    /*src: url(fonts/mainfont.otf);*/ /* Путь к файлу со шрифтом */
 }
 
 html{
 	background-color: #70afaf;
-	background-image: url(img/bckg_nightmode.jpg);
+	/**background-image: url(img/bckg_nightmode.jpg);**/
 	background-size: cover;
 }
 
-/**{
+/*{
 	cursor: url(src/cursors/gaming/white/default.cur), default;
 }*/
 
@@ -26,7 +26,7 @@ body{
 }
 
 .content {
-  font-family: MainFont1;
+  /*font-family: MainFont1;*/
   margin: 20px;
   padding: 8px;
   background-color: rgba(0,0,0,.3);
@@ -61,7 +61,7 @@ body{
 
 .header {
   color: #FFFFFF;
-  font-family: MainFont1;
+  /*font-family: MainFont1;*/
   padding: 1px 13px;
   backdrop-filter: blur(3px);
   background-color: rgba(0,0,0,.3);
