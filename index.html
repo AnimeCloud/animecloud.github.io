@@ -22,41 +22,11 @@
 	
 		if (!app.device.standalone && !app.device.desktop && localStorage['dev_mode'] === undefined) {
 			if (app.device.ios){
+				let html = new FileReader();
+				html.readAsText(file);
 				app.popup.create({
 					animate: false,
-					content: '<div class="popup popup-tablet-fullscreen"> \
-								<div class="page-content"> \
-									<div style="margin-top: 45px"> \
-										<div class="panel-handshake-container panel-min-content"> \
-											<div class="panel-logo-line"></div> \
-											<img src="/client/img/logo/zoomer-logo.png" style="height: 40px;padding-right: 15px;"> \
-										</div> \
-									</div> \
-									<center><div class="ios-guide-block"><img src="/client/img/ios_install_guide.gif" class="ios-guide-gif"></div></center> \
-									<div class="list inset no-hairlines-between no-margin-top"> \
-									  <ul style="background: #e3e0ff4d;"> \
-									    <li> \
-									      <div class="item-content"> \
-									        <div class="item-media"><i style="color:var(--f7-theme-color);font-size:35px" class="f7-icons">compass</i></div> \
-									        <div class="item-inner">Откройте эту страницу в Safari</div> \
-									      </div> \
-									    </li> \
-									    <li> \
-									      <div class="item-content"> \
-									        <div class="item-media"><i style="color:var(--f7-theme-color);font-size:35px" class="f7-icons">square_arrow_up</i></div> \
-									        <div class="item-inner">Нажмите на кнопку "Поделиться"</div> \
-									      </div> \
-									    </li> \
-									    <li> \
-									      <div class="item-content"> \
-									        <div class="item-media"><i style="color:var(--f7-theme-color);font-size:35px" class="f7-icons">plus_app</i></div> \
-									        <div class="item-inner">и выберите пункт "На экран Домой"</div> \
-									      </div> \
-									    </li> \
-									  </ul> \
-									</div> \
-								</div> \
-							  </div>',
+					content: html.readAsText("ios-install.html"),
 				}).open();
 			} else if (app.device.android){
 				app.popup.create({
