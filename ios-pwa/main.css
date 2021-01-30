@@ -15,9 +15,9 @@ html{
 	background-size: cover;
 }
 
-*{
+/**{
 	cursor: url(src/cursors/gaming/white/default.cur), default;
-}
+}*/
 
 body{
 	overflow-x: hidden;

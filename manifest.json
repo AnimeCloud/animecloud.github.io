@@ -14,8 +14,8 @@
     }
   ],
   "start_url": "/ios-pwa/index.html",
-  "background_color": "#3367D6",
+  "background_color": "#3367D650",
   "display": "standalone",
   "scope": "/ios-pwa/",
-  "theme_color": "#3367D6"
+  "theme_color": "#3367D650"
 }
