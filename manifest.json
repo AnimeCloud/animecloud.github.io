@@ -13,9 +13,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/ios-pwa/index.html",
+  "start_url": "ios.html",
   "background_color": "#3367D6",
   "display": "standalone",
-  "scope": "/ios-pwa/",
   "theme_color": "#3367D6"
 }
