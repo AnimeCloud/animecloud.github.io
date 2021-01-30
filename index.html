@@ -22,6 +22,7 @@
 	
 		if (!app.device.standalone && !app.device.desktop && localStorage['dev_mode'] === undefined) {
 			if (app.device.ios){
+				alert("iOS Detected")
 				app.popup.create({
 					animate: false,
 					content: '<h1>iOS Detected</h1>\
