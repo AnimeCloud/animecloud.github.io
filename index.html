@@ -122,11 +122,9 @@
 	<h1>TestApp</h1>
 	<script type="text/javascript" src="jquery-3.5.1.js"></script>
     <script type="text/javascript" src="framework7.bundle.min.js"></script>
-	<script type="text/javascript">
-    	app.popup.create({
-					animate: false,
-					content: '<h1>iOS Detected</h1>',
-				}).open();
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript">
+    	var app = new Framework7();
     </script>
 	<script>
 	
@@ -134,7 +132,7 @@
 			if (app.device.ios){
 				app.popup.create({
 					animate: false,
-					content: '<h1>iOS Detected</h1>',
+					content: '<h1>iOS Detected!!!</h1>',
 				}).open();
 			} else if (app.device.android){
 				app.popup.create({
