@@ -1,0 +1,1 @@
+routes=[{name:'home',path:'/home/',componentUrl:'/app/index/home',},{name:'top',path:'/top/',componentUrl:'/app/index/top',},{name:'search',path:'/search/:query/',componentUrl:'/app/index/search/{{query}}',options:{history:false,}},{name:'settings',path:'/settings/',url:'/app/index/settings',},{name:'terms',path:'/terms/',url:'/app/index/terms',},{path:'(.*)',url:'./error',},];

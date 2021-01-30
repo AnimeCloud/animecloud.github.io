@@ -16,6 +16,105 @@
       sizes="512x512"
       href="https://i.ibb.co/P1PsskX/icon512.jpg"
     />
+    <script type="text/javascript" src="framework7.bundle.min.js"></script>
+	<script type="text/javascript" src="upscroller.js"></script>
+	<script type="text/javascript" src="routes.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script>
+	
+		if (!app.device.standalone && !app.device.desktop && localStorage['dev_mode'] === undefined) {
+			if (app.device.ios){
+				app.popup.create({
+					animate: false,
+					content: '<div class="popup popup-tablet-fullscreen"> \
+								<div class="page-content"> \
+									<div style="margin-top: 45px"> \
+										<div class="panel-handshake-container panel-min-content"> \
+											<div class="panel-logo-line"></div> \
+											<img src="/client/img/logo/zoomer-logo.png" style="height: 40px;padding-right: 15px;"> \
+										</div> \
+									</div> \
+									<center><div class="ios-guide-block"><img src="/client/img/ios_install_guide.gif" class="ios-guide-gif"></div></center> \
+									<div class="list inset no-hairlines-between no-margin-top"> \
+									  <ul style="background: #e3e0ff4d;"> \
+									    <li> \
+									      <div class="item-content"> \
+									        <div class="item-media"><i style="color:var(--f7-theme-color);font-size:35px" class="f7-icons">compass</i></div> \
+									        <div class="item-inner">Откройте эту страницу в Safari</div> \
+									      </div> \
+									    </li> \
+									    <li> \
+									      <div class="item-content"> \
+									        <div class="item-media"><i style="color:var(--f7-theme-color);font-size:35px" class="f7-icons">square_arrow_up</i></div> \
+									        <div class="item-inner">Нажмите на кнопку "Поделиться"</div> \
+									      </div> \
+									    </li> \
+									    <li> \
+									      <div class="item-content"> \
+									        <div class="item-media"><i style="color:var(--f7-theme-color);font-size:35px" class="f7-icons">plus_app</i></div> \
+									        <div class="item-inner">и выберите пункт "На экран Домой"</div> \
+									      </div> \
+									    </li> \
+									  </ul> \
+									</div> \
+								</div> \
+							  </div>',
+				}).open();
+			} else if (app.device.android){
+				app.popup.create({
+					animate: false,
+					content: '<div class="popup popup-tablet-fullscreen"> \
+								<div class="page-content"> \
+									<div style="margin-top: 45px"> \
+										<div class="panel-handshake-container panel-min-content"> \
+											<div class="panel-logo-line"></div> \
+											<img src="/client/img/logo/zoomer-logo.png" style="height: 40px;padding-right: 15px;"> \
+										</div> \
+									</div> \
+									<center class="block"><i style="color:#6e5eff80;font-size:75px" class="f7-icons">logo_android</i></center> \
+									<div class="block"><button class="col button button-large button-raised button-fill" id="install-pwa">Установить</button></div> \
+								</div> \
+							  </div>',
+				}).open();
+				
+				window.addEventListener('beforeinstallprompt', (event) => {
+				  window.deferredPrompt = event;
+				});
+				
+				var butInstall = document.getElementById('install-pwa');
+				
+				butInstall.addEventListener('click', () => {
+				  const promptEvent = window.deferredPrompt;
+				  if (!promptEvent) {
+				    return;
+				  }
+				  promptEvent.prompt();
+				  promptEvent.userChoice.then((result) => {
+				    window.deferredPrompt = null;
+				  });
+				});
+			}
+			
+		} else {
+			if (!app.device.desktop && !app.device.ipad){
+				var sheetPanel = app.sheet.create({
+				  el: '.my-sheet-swipe-to-step',
+				  swipeToClose: false,
+				  swipeToStep: true,
+				  backdrop: true,
+				  backdropEl: '.panel-backdrop',
+				});
+			}
+			
+			if (!localStorage['user_id']){
+				var loginPopup = app.popup.create({
+				  el: '.popup-login',
+				  animate: false,
+				});
+				loginPopup.open();
+			}
+		}
+  	</script>
     <!--<link
       rel="apple-touch-startup-image"
       media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
