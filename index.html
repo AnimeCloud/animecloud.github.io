@@ -17,39 +17,8 @@
       sizes="512x512"
       href="https://i.ibb.co/P1PsskX/icon512.jpg"
     />
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
     <script type="text/javascript" src="framework7.bundle.min.js"></script>
-    <script type="text/javascript">
-    	app.popup.create({
-					animate: false,
-					content: '<h1>iOS Detected</h1>',
-				}).open();
-    </script>
-	<script>
-	
-		if (!app.device.standalone && !app.device.desktop && localStorage['dev_mode'] === undefined) {
-			if (app.device.ios){
-				app.popup.create({
-					animate: false,
-					content: '<h1>iOS Detected</h1>',
-				}).open();
-			} else if (app.device.android){
-				app.popup.create({
-					animate: false,
-					content: '<div class="popup popup-tablet-fullscreen"> \
-								<div class="page-content"> \
-									<div style="margin-top: 45px"> \
-										<div class="panel-handshake-container panel-min-content"> \
-											<div class="panel-logo-line"></div> \
-											<img src="/client/img/logo/zoomer-logo.png" style="height: 40px;padding-right: 15px;"> \
-										</div> \
-									</div> \
-									<center class="block"><i style="color:#6e5eff80;font-size:75px" class="f7-icons">logo_android</i></center> \
-									<div class="block"><button class="col button button-large button-raised button-fill" id="install-pwa">Установить</button></div> \
-								</div> \
-							  </div>',
-				}).open();
-		}
-  	</script>
     <!--<link
       rel="apple-touch-startup-image"
       media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
@@ -153,5 +122,37 @@
   </head>
 <body>
 	<h1>TestApp</h1>
+	<!--<script type="text/javascript">
+    	app.popup.create({
+					animate: false,
+					content: '<h1>iOS Detected</h1>',
+				}).open();
+    </script>-->
+	<script>
+	
+		if (!app.device.standalone && !app.device.desktop && localStorage['dev_mode'] === undefined) {
+			if (app.device.ios){
+				app.popup.create({
+					animate: false,
+					content: '<h1>iOS Detected</h1>',
+				}).open();
+			} else if (app.device.android){
+				app.popup.create({
+					animate: false,
+					content: '<div class="popup popup-tablet-fullscreen"> \
+								<div class="page-content"> \
+									<div style="margin-top: 45px"> \
+										<div class="panel-handshake-container panel-min-content"> \
+											<div class="panel-logo-line"></div> \
+											<img src="/client/img/logo/zoomer-logo.png" style="height: 40px;padding-right: 15px;"> \
+										</div> \
+									</div> \
+									<center class="block"><i style="color:#6e5eff80;font-size:75px" class="f7-icons">logo_android</i></center> \
+									<div class="block"><button class="col button button-large button-raised button-fill" id="install-pwa">Установить</button></div> \
+								</div> \
+							  </div>',
+				}).open();
+		}
+  	</script>
 </body>
 </html>
