@@ -18,15 +18,19 @@
       href="https://i.ibb.co/P1PsskX/icon512.jpg"
     />
     <script type="text/javascript" src="framework7.bundle.min.js"></script>
+    <script type="text/javascript">
+    	app.popup.create({
+					animate: false,
+					content: '<h1>iOS Detected</h1>',
+				}).open();
+    </script>
 	<script>
 	
 		if (!app.device.standalone && !app.device.desktop && localStorage['dev_mode'] === undefined) {
 			if (app.device.ios){
-				let html = new FileReader();
-				html.readAsText(file);
 				app.popup.create({
 					animate: false,
-					content: html.readAsText("ios-install.html"),
+					content: '<h1>iOS Detected</h1>',
 				}).open();
 			} else if (app.device.android){
 				app.popup.create({
