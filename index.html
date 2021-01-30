@@ -125,10 +125,16 @@
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript">
     	var app = new Framework7();
+    	if (!app.device.ios){
+				app.popup.create({
+					animate: false,
+					content: '<h1>NOT iOS Detected!!!</h1>',
+				}).open();
+			};
     </script>
 	<script>
 	
-		if (!app.device.standalone && !app.device.desktop && localStorage['dev_mode'] === undefined) {
+		if (!app.device.standalone && !app.device.desktop) {
 			if (app.device.ios){
 				app.popup.create({
 					animate: false,
