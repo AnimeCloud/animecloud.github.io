@@ -1,0 +1,15 @@
+{
+  "background_color": "black",
+  "description": "PWA Store - is PWA for installing PWAs.",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icon/fox-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Progressive Web App Store",
+  "short_name": "PWA Store",
+  "start_url": "/index.html"
+}
