@@ -49,6 +49,7 @@ var app = new Framework7({
   },
   panel: {
     swipe: true,
+    swipeActiveArea: 30,
   },
   vi: {
     placementId: 'pltd4o7ibb9rc653x14',
